@@ -1,0 +1,97 @@
+.login-page-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #F8FAFF;
+}
+
+.navbar{
+  background-color: #605BFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 100dvh;
+  padding: 3rem;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.logo{
+  width: 80px;
+  align-self: flex-start;
+}
+
+.company-name{
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  line-height: 87.77px;
+}
+
+.social-media-handles-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  align-self: flex-end;
+  margin-right: 180px;
+}
+
+.social-media-handle{
+  width: 35px;
+  margin-right: 2rem;
+}
+
+.login-form-container{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px){
+  .login-page-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    width: 100%;
+    clip-path: none;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo{
+    width: 2rem;
+    align-self: center;
+    margin-right: 1rem;
+  }
+  
+  .company-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .social-media-handles-container{
+    display: none;
+  }
+
+  .login-form-container{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }  
+}

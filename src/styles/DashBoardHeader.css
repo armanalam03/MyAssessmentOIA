@@ -1,0 +1,51 @@
+.header-container{
+  padding: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #FAFAFB;
+  z-index: 10;
+}
+
+.header-heading{
+  font-size: 2rem;
+  font-weight: 600;
+  color: black
+}
+
+.icon-group{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.bell-icon{
+  width: 18px;
+}
+
+.user-icon{
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+  .header-container{
+    padding: .2rem;
+    position: relative;
+  }
+
+  .header-heading{
+    font-size: 1.5rem;
+  }
+
+  .icon-group{
+    display: none;
+  }  
+}

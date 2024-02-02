@@ -1,0 +1,61 @@
+.dashboard-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.dashboard-header{
+  display: none;
+}
+
+@media screen and (max-width: 500px){
+  .dashboard-container{
+    flex-direction: column;
+  }
+
+  .dashboard-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .5rem 1rem;
+    width: 100%;
+    background-color: white;
+  }
+
+  .header-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hamburger-menu{
+    width: 1rem;
+  }
+  
+  .logo-and-company{
+    width: 5rem;
+  }
+  
+  .header-icon-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 5rem;
+  }
+  
+  .bell-icon{
+    width: 18px;
+  }
+  
+  .user-icon{
+    width: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+}
