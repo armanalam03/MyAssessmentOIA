@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import HamburgerMenu from '../components/HamburgerMenu'
 import Upload from '../components/Upload'
 import '../styles/DashBoard.css'
@@ -6,13 +6,26 @@ import LogonCompany from '../assets/icons/logo-and-company.png'
 import HamburgerIcon from '../assets/icons/hamburger-icon.png'
 import BellIcon from '../assets/icons/bell-icon.png'
 import UserIcon from '../assets/icons/user-icon.png'
-import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut, signInWithPopup, onAuthStateChanged } from "firebase/auth";
+import { auth, provider } from '../auth/firebaseAuthConfig'
 import { useNavigate } from 'react-router-dom';
 
 function DashBoard() {
   const [isShown, setIsShown] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        navigate('/');
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
